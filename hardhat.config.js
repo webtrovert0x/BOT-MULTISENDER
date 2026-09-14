@@ -27,4 +27,19 @@ module.exports = {
       accounts: [PRIVATE_KEY],
     },
   },
+  etherscan: {
+    apiKey: {
+      botchainTestnet: "placeholder",
+    },
+    customChains: [
+      {
+        network: "botchainTestnet",
+        chainId: 968,
+        urls: {
+          apiURL: "https://scan.bohr.life/api",
+          browserURL: "https://scan.bohr.life",
+        },
+      },
+    ],
+  },
 };

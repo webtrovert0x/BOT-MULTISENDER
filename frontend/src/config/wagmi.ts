@@ -2,7 +2,7 @@ import { http } from 'wagmi';
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi';
 import { botchainTestnet } from './chains';
 
-export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || 'd9690df1851903b53a4f8c440127edec';
+export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || '';
 
 export const networks = [botchainTestnet];
 
