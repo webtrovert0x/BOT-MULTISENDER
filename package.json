@@ -1,0 +1,24 @@
+{
+  "name": "botchain-multisender",
+  "version": "1.0.0",
+  "description": "Token and Native BOT multisender smart contract and dApp for Botchain Testnet",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:botchain": "hardhat run scripts/deploy.js --network botchainTestnet"
+  },
+  "keywords": [
+    "botchain",
+    "multisender",
+    "web3",
+    "solidity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.18"
+  }
+}

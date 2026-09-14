@@ -1,0 +1,32 @@
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Hardhat Build Artifacts
+artifacts/
+cache/
+typechain/
+typechain-types/
+
+# Next.js Build Outputs & Cache
+.next/
+out/
+build/
+dist/
+
+# OS & Editor Files
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/
+.idea/
