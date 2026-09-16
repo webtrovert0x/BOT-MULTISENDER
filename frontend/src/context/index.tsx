@@ -4,7 +4,7 @@ import React, { type ReactNode } from 'react';
 import { createAppKit } from '@reown/appkit/react';
 import { WagmiProvider, type State } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { botchainTestnet } from '@/config/chains';
+import { botchain } from '@/config/chains';
 import { wagmiAdapter, projectId, networks } from '@/config/wagmi';
 
 const queryClient = new QueryClient({
@@ -18,25 +18,23 @@ const queryClient = new QueryClient({
 
 // Set up metadata
 const metadata = {
-  name: 'Botchain Multisender',
-  description: 'Effortlessly batch send Native BOT and ERC-20 tokens on Botchain Testnet',
-  url: 'https://botchain-multisender.local',
-  icons: ['https://scan.bohr.life/favicon.ico'],
+  name: 'BOT Chain Multisender',
+  description: 'Effortlessly batch send Native BOT and ERC-20 tokens on BOT Chain Mainnet',
+  url: 'https://scan.botchain.ai',
+  icons: ['https://scan.botchain.ai/favicon.ico'],
 };
 
 // Initialize AppKit modal
 createAppKit({
   adapters: [wagmiAdapter],
   projectId,
-  networks: [botchainTestnet],
-  defaultNetwork: botchainTestnet,
+  networks: [botchain],
+  defaultNetwork: botchain,
   metadata,
-  themeMode: 'dark',
+  themeMode: 'light',
   themeVariables: {
-    '--w3m-accent': '#6366f1',
-    '--w3m-border-radius-master': '12px',
-    '--w3m-color-mix': '#0f172a',
-    '--w3m-color-mix-strength': 40,
+    '--w3m-accent': '#1B4ED8',
+    '--w3m-border-radius-master': '10px',
   },
   features: {
     analytics: false,

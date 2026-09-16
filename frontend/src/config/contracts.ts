@@ -22,6 +22,17 @@ export const ERC20_ABI = parseAbi([
   'function transferFrom(address from, address to, uint256 amount) external returns (bool)',
 ]);
 
-// Deployed BotMultisender Contract Address on BOT Chain (Chain ID: 968)
+// Deployed BotMultisender Contract Address on BOT Chain Mainnet (Chain ID: 677)
 export const DEFAULT_MULTISENDER_ADDRESS: `0x${string}` = 
-  (process.env.NEXT_PUBLIC_MULTISENDER_ADDRESS as `0x${string}`) || '0x5972a42B05a60c4681a361ebC876628EA2fE7766';
+  (process.env.NEXT_PUBLIC_MULTISENDER_ADDRESS as `0x${string}`) || 
+  (process.env.NEXT_PUBLIC_MAINNET_MULTISENDER_ADDRESS as `0x${string}`) || 
+  '0x5972a42B05a60c4681a361ebC876628EA2fE7766';
+
+export const MULTISENDER_ADDRESSES: Record<number, `0x${string}`> = {
+  677: DEFAULT_MULTISENDER_ADDRESS,
+};
+
+export function getMultisenderAddress(chainId?: number): `0x${string}` {
+  return DEFAULT_MULTISENDER_ADDRESS;
+}
+

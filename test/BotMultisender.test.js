@@ -8,7 +8,7 @@ describe("BotMultisender", function () {
   beforeEach(async function () {
     [owner, user1, user2, user3] = await ethers.getSigners();
 
-    const BotMultisender = await ethers.getContractFactory("BotMultisender");
+    const BotMultisender = await ethers.getContractFactory("contracts/BotMultisender.sol:BotMultisender");
     multisender = await BotMultisender.deploy();
     await multisender.waitForDeployment();
 

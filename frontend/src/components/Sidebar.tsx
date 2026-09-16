@@ -4,7 +4,7 @@ import React from 'react';
 import { useAccount, useBalance } from 'wagmi';
 import { useAppKit } from '@reown/appkit/react';
 import { shortenAddress, formatBalance } from '@/utils/formatters';
-import { botchainTestnet } from '@/config/chains';
+import { botchain } from '@/config/chains';
 import { Send, LayoutDashboard, History, FileCode2, BookOpen, Wallet, LogOut, Copy, Check } from 'lucide-react';
 
 interface SidebarProps {
@@ -19,7 +19,7 @@ export default function Sidebar({ currentView, onSelectView }: SidebarProps) {
 
   const { data: balanceData } = useBalance({
     address,
-    chainId: botchainTestnet.id,
+    chainId: botchain.id,
   });
 
   const copyAddress = () => {
@@ -38,7 +38,7 @@ export default function Sidebar({ currentView, onSelectView }: SidebarProps) {
           <div className="brand-logo">B</div>
           <div className="brand-info">
             <span className="brand-title">BOT MULTISENDER</span>
-            <span className="brand-subtitle">BOT Chain (968)</span>
+            <span className="brand-subtitle">BOT Chain (677)</span>
           </div>
         </div>
 

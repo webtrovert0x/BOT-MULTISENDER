@@ -120,6 +120,19 @@ export default function Home() {
 
   const handleCloseExecution = () => {
     setActiveStep(1);
+    setRows([]);
+  };
+
+  const handleResetAndSendAgain = () => {
+    setActiveStep(1);
+    setRows([]);
+    setCurrentView('send');
+  };
+
+  const handleViewHistory = () => {
+    setActiveStep(1);
+    setRows([]);
+    setCurrentView('history');
   };
 
   return (
@@ -220,6 +233,8 @@ export default function Home() {
                   multisenderAddress={multisenderAddress}
                   onClose={handleCloseExecution}
                   onSuccess={handleRecordSuccess}
+                  onViewHistory={handleViewHistory}
+                  onResetAndSendAgain={handleResetAndSendAgain}
                 />
               )}
             </div>

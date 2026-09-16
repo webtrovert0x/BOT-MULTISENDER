@@ -1,12 +1,13 @@
 {
   "name": "botchain-multisender",
   "version": "1.0.0",
-  "description": "Token and Native BOT multisender smart contract and dApp for Botchain Testnet",
+  "description": "Token and Native BOT multisender smart contract and dApp for BOT Chain",
   "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy:botchain": "hardhat run scripts/deploy.js --network botchainTestnet"
+    "deploy": "hardhat run scripts/deploy.js --network botchain",
+    "deploy:botchain": "hardhat run scripts/deploy.js --network botchain"
   },
   "keywords": [
     "botchain",

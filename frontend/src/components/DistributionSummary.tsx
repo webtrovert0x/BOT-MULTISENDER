@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useAccount, useChainId, usePublicClient } from 'wagmi';
 import { parseEther, formatEther, isAddress } from 'viem';
 import { BOT_MULTISENDER_ABI, DEFAULT_MULTISENDER_ADDRESS } from '@/config/contracts';
-import { botchainTestnet } from '@/config/chains';
+import { botchain } from '@/config/chains';
 import { formatBalance } from '@/utils/formatters';
 import type { TokenOption, DistributionSummaryData, RecipientRowItem } from '@/types';
 import { ArrowRight, Loader2, Info } from 'lucide-react';
@@ -32,7 +32,7 @@ export default function DistributionSummary({
   const [gasLoading, setGasLoading] = useState(false);
   const [gasError, setGasError] = useState<string | null>(null);
 
-  const isCorrectChain = isConnected && chainId === botchainTestnet.id;
+  const isCorrectChain = isConnected && chainId === botchain.id;
   const isReadyToReview =
     isConnected &&
     isCorrectChain &&

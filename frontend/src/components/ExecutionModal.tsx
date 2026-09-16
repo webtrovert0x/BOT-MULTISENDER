@@ -6,7 +6,7 @@ import { maxUint256, isAddress } from 'viem';
 import { BOT_MULTISENDER_ABI, ERC20_ABI } from '@/config/contracts';
 import { getExplorerTxUrl, shortenAddress } from '@/utils/formatters';
 import type { TokenOption, DistributionSummaryData, RecipientRowItem, TxRecord } from '@/types';
-import { CheckCircle2, AlertCircle, Loader2, ExternalLink, ArrowRight, ShieldCheck, Check } from 'lucide-react';
+import { CheckCircle2, AlertCircle, Loader2, ExternalLink, ArrowRight, ShieldCheck, Check, History, RotateCcw, Plus } from 'lucide-react';
 
 interface ExecutionModalProps {
   token: TokenOption;
@@ -15,6 +15,8 @@ interface ExecutionModalProps {
   multisenderAddress: string;
   onClose: () => void;
   onSuccess: (record: TxRecord) => void;
+  onViewHistory?: () => void;
+  onResetAndSendAgain?: () => void;
 }
 
 export default function ExecutionModal({
@@ -24,6 +26,8 @@ export default function ExecutionModal({
   multisenderAddress,
   onClose,
   onSuccess,
+  onViewHistory,
+  onResetAndSendAgain,
 }: ExecutionModalProps) {
   const { address } = useAccount();
   const publicClient = usePublicClient();
@@ -334,7 +338,7 @@ export default function ExecutionModal({
                   textDecoration: 'none',
                 }}
               >
-                <span>View on BohrScan Explorer</span>
+                <span>View on BotScan Explorer</span>
                 <ExternalLink size={13} />
               </a>
             )}
@@ -346,24 +350,25 @@ export default function ExecutionModal({
           <div style={{ textAlign: 'center', padding: '16px 0' }}>
             <div
               style={{
-                width: '44px',
-                height: '44px',
+                width: '52px',
+                height: '52px',
                 borderRadius: '50%',
                 backgroundColor: 'var(--status-success-bg)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                margin: '0 auto 12px',
+                margin: '0 auto 16px',
+                border: '1px solid var(--status-success-border)',
               }}
             >
-              <CheckCircle2 size={28} color="#098347" />
+              <CheckCircle2 size={32} color="#098347" />
             </div>
 
-            <div style={{ fontSize: '15px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '4px' }}>
-              Batch Transfer Successful
+            <div style={{ fontSize: '18px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '6px' }}>
+              Distribution Confirmed!
             </div>
             <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '20px' }}>
-              Successfully distributed {summary.totalAmountFormatted} {token.symbol} to {summary.validCount} recipients.
+              Successfully sent <strong>{summary.totalAmountFormatted} {token.symbol}</strong> to <strong>{summary.validCount} recipient wallets</strong> in 1 transaction.
             </div>
 
             {activeTxHash && (
@@ -372,29 +377,29 @@ export default function ExecutionModal({
                   backgroundColor: 'var(--bg-surface-subtle)',
                   border: '1px solid var(--border-main)',
                   borderRadius: 'var(--radius-sm)',
-                  padding: '12px',
+                  padding: '14px',
                   marginBottom: '20px',
                   fontSize: '12px',
                   textAlign: 'left',
                 }}
               >
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                  <span style={{ color: 'var(--text-secondary)' }}>Tx Hash:</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ color: 'var(--text-secondary)' }}>Transaction Hash:</span>
                   <a
                     href={getExplorerTxUrl(activeTxHash)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-mono"
-                    style={{ color: 'var(--accent-blue)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}
+                    style={{ color: 'var(--accent-blue)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 600 }}
                   >
                     <span>{shortenAddress(activeTxHash, 6)}</span>
-                    <ExternalLink size={11} />
+                    <ExternalLink size={12} />
                   </a>
                 </div>
                 {confirmedDetails?.blockNumber && (
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                     <span style={{ color: 'var(--text-secondary)' }}>Block Number:</span>
-                    <span>{confirmedDetails.blockNumber}</span>
+                    <span className="font-mono">#{confirmedDetails.blockNumber}</span>
                   </div>
                 )}
                 {confirmedDetails?.gasUsed && (
@@ -406,9 +411,39 @@ export default function ExecutionModal({
               </div>
             )}
 
-            <button type="button" onClick={onClose} className="btn-solid-blue">
-              Done
-            </button>
+            <div style={{ display: 'flex', gap: '10px', marginTop: '16px' }}>
+              <button
+                type="button"
+                onClick={() => {
+                  if (onResetAndSendAgain) {
+                    onResetAndSendAgain();
+                  } else {
+                    onClose();
+                  }
+                }}
+                className="btn-outline"
+                style={{ flex: 1, padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}
+              >
+                <RotateCcw size={14} />
+                <span>New Distribution</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  if (onViewHistory) {
+                    onViewHistory();
+                  } else {
+                    onClose();
+                  }
+                }}
+                className="btn-solid-blue"
+                style={{ flex: 1, padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}
+              >
+                <History size={14} />
+                <span>View in History</span>
+              </button>
+            </div>
           </div>
         )}
 

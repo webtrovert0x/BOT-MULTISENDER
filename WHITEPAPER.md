@@ -140,13 +140,12 @@ The protocol is deployed and verified on **BOT Chain**:
 
 | Parameter | Specification |
 | :--- | :--- |
-| **Chain ID** | `968` |
+| **Chain ID** | `677` (`0x2a5`) |
 | **Network Name** | BOT Chain |
-| **RPC Endpoint** | `https://rpc.bohr.life` |
+| **RPC Endpoint** | `https://rpc.botchain.ai` |
 | **Native Asset** | `BOT` (18 Decimals) |
-| **Total Native Supply** | 150,000,000 BOT |
-| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
-| **Deployed Contract** | **`0x5972a42B05a60c4681a361ebC876628EA2fE7766`** |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
+| **Verified Contract** | **[`0x5972a42B05a60c4681a361ebC876628EA2fE7766`](https://scan.botchain.ai/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766#code)** |
 
 ---
 
@@ -171,5 +170,6 @@ The BOT Multisender Protocol provides an essential public good for the BOT Chain
 ---
 
 ### Contract Verification & Links
-- **BohrScan Explorer**: [https://scan.bohr.life/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766](https://scan.bohr.life/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766)
+- **BotScan Explorer**: [https://scan.botchain.ai/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766#code](https://scan.botchain.ai/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766#code)
 - **Official GitHub**: [https://github.com/webtrovert0x/BOT-MULTISENDER](https://github.com/webtrovert0x/BOT-MULTISENDER)
+

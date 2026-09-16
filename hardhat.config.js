@@ -21,23 +21,23 @@ module.exports = {
   },
   networks: {
     hardhat: {},
-    botchainTestnet: {
-      url: process.env.BOTCHAIN_RPC || "https://rpc.bohr.life",
-      chainId: 968,
+    botchain: {
+      url: process.env.BOTCHAIN_RPC || "https://rpc.botchain.ai",
+      chainId: 677,
       accounts: [PRIVATE_KEY],
     },
   },
   etherscan: {
     apiKey: {
-      botchainTestnet: "placeholder",
+      botchain: "placeholder",
     },
     customChains: [
       {
-        network: "botchainTestnet",
-        chainId: 968,
+        network: "botchain",
+        chainId: 677,
         urls: {
-          apiURL: "https://scan.bohr.life/api",
-          browserURL: "https://scan.bohr.life",
+          apiURL: "https://scan.botchain.ai/api",
+          browserURL: "https://scan.botchain.ai",
         },
       },
     ],

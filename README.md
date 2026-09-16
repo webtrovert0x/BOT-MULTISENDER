@@ -1,12 +1,12 @@
 # 🚀 BOT Multisender — Official Protocol & Web App
 
-[![Network: BOT Chain](https://img.shields.io/badge/Network-BOT%20Chain%20(968)-1B4ED8?style=flat-square)](https://scan.bohr.life)
+[![Network: BOT Chain](https://img.shields.io/badge/Network-BOT%20Chain%20(677)-1B4ED8?style=flat-square)](https://scan.botchain.ai)
 [![Solidity: 0.8.20](https://img.shields.io/badge/Solidity-0.8.20-363636?style=flat-square&logo=solidity)](https://soliditylang.org/)
 [![Next.js: 14](https://img.shields.io/badge/Next.js-14%20App%20Router-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript: 5.7](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Wagmi: v2](https://img.shields.io/badge/Wagmi-v2-black?style=flat-square)](https://wagmi.sh)
 
-A high-performance, non-custodial batch token distribution protocol and institutional desktop web app for **BOT Chain (Chain ID: 968)**. Send Native `BOT` coins or any custom `ERC-20` token to hundreds of recipient wallets in a single transaction with up to **75% gas savings**.
+A high-performance, non-custodial batch token distribution protocol and institutional desktop web app for **BOT Chain (Chain ID: 677)**. Send Native `BOT` coins or any custom `ERC-20` token to hundreds of recipient wallets in a single transaction with up to **75% gas savings**.
 
 📄 **Read the Full Technical Whitepaper**: [WHITEPAPER.md](./WHITEPAPER.md)
 
@@ -16,13 +16,12 @@ A high-performance, non-custodial batch token distribution protocol and institut
 
 | Parameter | Specification |
 | :--- | :--- |
-| **Network Name** | BOT Chain Mainnet |
-| **Chain ID** | `968` |
-| **RPC URL** | `https://rpc.bohr.life` |
+| **Network Name** | BOT Chain |
+| **Chain ID** | `677` (`0x2a5`) |
+| **RPC URL** | `https://rpc.botchain.ai` |
 | **Native Token Symbol** | `BOT` (18 Decimals) |
-| **Total Native Supply** | 150 Million BOT |
-| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
-| **Deployed Contract** | **[`0x5972a42B05a60c4681a361ebC876628EA2fE7766`](https://scan.bohr.life/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766)** |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
+| **Verified Contract** | **[`0x5972a42B05a60c4681a361ebC876628EA2fE7766`](https://scan.botchain.ai/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766#code)** |
 
 ---
 
@@ -127,16 +126,16 @@ npm run start
 
 ---
 
-### 3. Deploying Your Own Smart Contract
+### 3. Deploying Your Smart Contract
 
-If you want to deploy a custom instance of `BotMultisender.sol` to BOT Chain:
+If you want to deploy an instance of `BotMultisender.sol` to BOT Chain:
 
 1. Configure your `.env` file in the project root:
    ```env
    PRIVATE_KEY=your_private_key_here
-   BOTCHAIN_RPC=https://rpc.bohr.life
+   BOTCHAIN_RPC=https://rpc.botchain.ai
    ```
-2. Run the Hardhat deployment script:
+2. Run the deployment script:
    ```bash
    npm run deploy:botchain
    ```
@@ -144,7 +143,7 @@ If you want to deploy a custom instance of `BotMultisender.sol` to BOT Chain:
    ```
    ✅ BotMultisender successfully deployed at: 0x...
    ```
-4. Update `NEXT_PUBLIC_MULTISENDER_ADDRESS` in `frontend/.env.local` with your new address.
+4. Update `NEXT_PUBLIC_MULTISENDER_ADDRESS` in `frontend/.env.local` with your address.
 
 ---
 
@@ -193,7 +192,7 @@ recipient,amount
 - **Non-Custodial**: The contract never holds custody of funds. Tokens and native coins are routed directly from `msg.sender` to recipients within the execution frame.
 - **Zero Storage State**: The contract stores no user balances or internal state, eliminating storage manipulation and reentrancy attack surfaces.
 - **Exact Excess Refund**: Any surplus native value sent to `multisendNative` is refunded back to `msg.sender` before transaction completion.
-- **Verified Source Code**: Deployed and public on [BohrScan Explorer](https://scan.bohr.life/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766).
+- **Verified Source Code**: Deployed and public on [BotScan Explorer](https://scan.botchain.ai/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766#code).
 
 ---
 

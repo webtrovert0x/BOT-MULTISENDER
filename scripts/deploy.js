@@ -11,7 +11,7 @@ async function main() {
   const balance = await hre.ethers.provider.getBalance(deployer.address);
   console.log("Deployer balance:", hre.ethers.formatEther(balance), "BOT");
 
-  const BotMultisender = await hre.ethers.getContractFactory("BotMultisender");
+  const BotMultisender = await hre.ethers.getContractFactory("contracts/BotMultisender.sol:BotMultisender");
   const multisender = await BotMultisender.deploy();
 
   await multisender.waitForDeployment();

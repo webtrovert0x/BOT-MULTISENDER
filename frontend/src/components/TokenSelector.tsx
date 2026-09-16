@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useAccount, useBalance, useReadContracts } from 'wagmi';
 import { isAddress, formatUnits } from 'viem';
 import { ERC20_ABI } from '@/config/contracts';
-import { botchainTestnet } from '@/config/chains';
+import { botchain } from '@/config/chains';
 import { formatBalance } from '@/utils/formatters';
 import type { TokenOption } from '@/types';
 import { Coins, Search, Check, AlertCircle, Plus } from 'lucide-react';
@@ -23,7 +23,7 @@ export default function TokenSelector({ selectedToken, onSelectToken }: TokenSel
   // Live Native BOT Balance
   const { data: nativeBalance, isLoading: isNativeLoading } = useBalance({
     address,
-    chainId: botchainTestnet.id,
+    chainId: botchain.id,
   });
 
   // Initialize Native BOT as default token when connected

@@ -22,12 +22,13 @@ export function formatBalance(val?: string | number | null, maxDecimals: number 
 }
 
 /**
- * Explorer link helpers for Botchain Testnet (BohrScan)
+ * Explorer link helpers for BOT Chain (BotScan)
  */
 export function getExplorerTxUrl(txHash: string): string {
-  return `https://scan.bohr.life/tx/${txHash}`;
+  return `https://scan.botchain.ai/tx/${txHash}`;
 }
 
 export function getExplorerAddressUrl(address: string): string {
-  return `https://scan.bohr.life/address/${address}`;
+  return `https://scan.botchain.ai/address/${address}`;
 }
+

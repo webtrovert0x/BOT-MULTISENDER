@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useAccount, useBalance } from 'wagmi';
-import { botchainTestnet } from '@/config/chains';
+import { botchain } from '@/config/chains';
 import { formatBalance, shortenAddress } from '@/utils/formatters';
 import type { TxRecord } from '@/types';
 import { Send, History, Wallet, ShieldCheck, ArrowRight, ExternalLink } from 'lucide-react';
@@ -16,7 +16,7 @@ export default function DashboardView({ onStartSend, history }: DashboardViewPro
   const { address, isConnected } = useAccount();
   const { data: balanceData } = useBalance({
     address,
-    chainId: botchainTestnet.id,
+    chainId: botchain.id,
   });
 
   return (
@@ -59,10 +59,10 @@ export default function DashboardView({ onStartSend, history }: DashboardViewPro
             Active Network
           </div>
           <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--status-success)' }}>
-            BOT Chain
+            BOT Chain Mainnet
           </div>
           <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '4px' }}>
-            Chain ID: 968 (BohrScan)
+            Chain ID: 677 (BotScan)
           </div>
         </div>
       </div>

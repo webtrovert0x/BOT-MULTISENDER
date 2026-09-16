@@ -3,8 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useAccount, useChainId, useSwitchChain, useDisconnect } from 'wagmi';
 import { useAppKit } from '@reown/appkit/react';
-import { botchainTestnet } from '@/config/chains';
-import { shortenAddress } from '@/utils/formatters';
+import { botchain } from '@/config/chains';
+import { shortenAddress, getExplorerAddressUrl } from '@/utils/formatters';
 import { AlertCircle, ChevronDown, Copy, LogOut, Check, RefreshCw, ExternalLink } from 'lucide-react';
 
 export default function TopBar() {
@@ -18,7 +18,7 @@ export default function TopBar() {
   const [copied, setCopied] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const isCorrectChain = isConnected && chainId === botchainTestnet.id;
+  const isCorrectChain = isConnected && chainId === botchain.id;
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -45,7 +45,7 @@ export default function TopBar() {
         {isConnected && !isCorrectChain ? (
           <button
             type="button"
-            onClick={() => switchChain({ chainId: botchainTestnet.id })}
+            onClick={() => switchChain({ chainId: botchain.id })}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -66,7 +66,7 @@ export default function TopBar() {
         ) : (
           <div className="network-chip">
             <span className={`status-dot ${isCorrectChain ? 'online' : 'warning'}`} />
-            <span>{isCorrectChain ? 'BOT Chain Mainnet (968)' : 'Disconnected'}</span>
+            <span>{isCorrectChain ? 'BOT Chain Mainnet (677)' : 'Disconnected'}</span>
           </div>
         )}
       </div>
@@ -112,14 +112,14 @@ export default function TopBar() {
                 </button>
 
                 <a
-                  href={`https://scan.bohr.life/address/${address}`}
+                  href={getExplorerAddressUrl(address)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="nav-item"
                   style={{ padding: '8px 10px', fontSize: '12px', textDecoration: 'none' }}
                 >
                   <ExternalLink size={14} />
-                  <span>View on BohrScan</span>
+                  <span>View on BotScan</span>
                 </a>
 
                 <button

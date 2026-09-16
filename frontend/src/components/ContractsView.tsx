@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DEFAULT_MULTISENDER_ADDRESS } from '@/config/contracts';
 import { shortenAddress, getExplorerAddressUrl } from '@/utils/formatters';
 import { FileCode2, Copy, Check, ExternalLink, Save } from 'lucide-react';
@@ -14,6 +14,10 @@ export default function ContractsView({ multisenderAddress, onUpdateAddress }: C
   const [addressInput, setAddressInput] = useState(multisenderAddress);
   const [copied, setCopied] = useState(false);
   const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    setAddressInput(multisenderAddress);
+  }, [multisenderAddress]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(multisenderAddress);
@@ -32,7 +36,7 @@ export default function ContractsView({ multisenderAddress, onUpdateAddress }: C
       <div className="page-header">
         <h1 className="page-title">Smart Contracts</h1>
         <p className="page-subtitle">
-          Verified batch distribution smart contract configuration on BOT Chain (Chain ID: 968).
+          Verified batch distribution smart contract configuration on BOT Chain (Chain ID: 677).
         </p>
       </div>
 
@@ -71,7 +75,7 @@ export default function ContractsView({ multisenderAddress, onUpdateAddress }: C
               rel="noopener noreferrer"
               style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', color: 'var(--accent-blue)', textDecoration: 'none' }}
             >
-              <span>View on BohrScan Explorer</span>
+              <span>View on BotScan Explorer</span>
               <ExternalLink size={12} />
             </a>
           </div>

@@ -40,7 +40,7 @@ export default function DocsView() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
             <Network size={18} color="var(--accent-blue)" />
             <h3 style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-primary)' }}>
-              BOT Chain Parameters
+              BOT Chain Network Parameters
             </h3>
           </div>
 
@@ -48,15 +48,15 @@ export default function DocsView() {
             <tbody>
               <tr>
                 <td style={{ fontWeight: 600, width: '180px' }}>Network Name</td>
-                <td>BOT Chain Mainnet</td>
+                <td>BOT Chain</td>
               </tr>
               <tr>
                 <td style={{ fontWeight: 600 }}>Chain ID</td>
-                <td className="font-mono">968</td>
+                <td className="font-mono">677 (0x2a5)</td>
               </tr>
               <tr>
                 <td style={{ fontWeight: 600 }}>RPC URL</td>
-                <td className="font-mono">https://rpc.bohr.life</td>
+                <td className="font-mono">https://rpc.botchain.ai</td>
               </tr>
               <tr>
                 <td style={{ fontWeight: 600 }}>Native Currency</td>
@@ -65,8 +65,16 @@ export default function DocsView() {
               <tr>
                 <td style={{ fontWeight: 600 }}>Block Explorer</td>
                 <td>
-                  <a href="https://scan.bohr.life" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-blue)' }}>
-                    https://scan.bohr.life
+                  <a href="https://scan.botchain.ai" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-blue)' }}>
+                    https://scan.botchain.ai
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style={{ fontWeight: 600 }}>Verified Multisender</td>
+                <td>
+                  <a href="https://scan.botchain.ai/address/0x5972a42B05a60c4681a361ebC876628EA2fE7766#code" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-blue)', fontFamily: 'var(--font-mono)' }}>
+                    0x5972a42B05a60c4681a361ebC876628EA2fE7766
                   </a>
                 </td>
               </tr>
