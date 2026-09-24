@@ -3,14 +3,14 @@
 
 *Version 1.0.0 — September 2026*  
 *Protocol Status: Mainnet Live*  
-*Target Network: BOT Chain (Chain ID: 968)*  
+*Target Network: BOT Chain Mainnet (Chain ID: 677)*  
 *Official Contract: `0x5972a42B05a60c4681a361ebC876628EA2fE7766`*
 
 ---
 
 ## Executive Summary
 
-The **BOT Multisender Protocol** is a decentralized, non-custodial batch transaction routing layer deployed natively on **BOT Chain** (Chain ID: 968). It enables token issuers, decentralized autonomous organizations (DAOs), Web3 gaming ecosystems, and decentralized protocols to distribute Native `BOT` coins and ERC-20 tokens to thousands of unique wallet addresses in a single atomic transaction.
+The **BOT Multisender Protocol** is a decentralized, non-custodial batch transaction routing layer deployed natively on **BOT Chain Mainnet** (Chain ID: 677). It enables token issuers, decentralized autonomous organizations (DAOs), Web3 gaming ecosystems, and decentralized protocols to distribute Native `BOT` coins and ERC-20 tokens to thousands of unique wallet addresses in a single atomic transaction.
 
 By eliminating the redundant per-transaction base gas overhead (21,000 gas per Ethereum Virtual Machine transaction) and consolidating multi-party payouts into memory-optimized loops, BOT Multisender reduces cumulative network execution costs by up to **75%** while guaranteeing zero protocol-held custody, trustless execution, and mathematical excess refund guarantees.
 

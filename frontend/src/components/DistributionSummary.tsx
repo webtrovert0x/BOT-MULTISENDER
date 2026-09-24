@@ -139,7 +139,7 @@ export default function DistributionSummary({
         <div className="summary-row">
           <span className="summary-row-label">Network</span>
           <span className="summary-row-value" style={{ color: isCorrectChain ? 'var(--status-success)' : 'var(--status-error)' }}>
-            {isCorrectChain ? 'BOT Chain (968)' : 'Wrong Network'}
+            {isCorrectChain ? 'BOT Chain Mainnet (677)' : 'Wrong Network'}
           </span>
         </div>
 

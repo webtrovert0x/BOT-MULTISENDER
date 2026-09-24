@@ -184,7 +184,7 @@ export default function TokenSelector({ selectedToken, onSelectToken }: TokenSel
               Add ERC-20 Token
             </h3>
             <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '16px' }}>
-              Paste any verified ERC-20 token contract address on BOT Chain (Chain ID: 968).
+              Paste any verified ERC-20 token contract address on BOT Chain (Chain ID: 677).
             </p>
 
             <div style={{ marginBottom: '16px' }}>
