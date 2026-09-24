@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import ContextProvider from '@/context';
-import { headers } from 'next/headers';
 
 export const metadata: Metadata = {
   title: 'BOT Multisender | BOT Chain Token Distribution',
   description: 'Desktop-first Web3 infrastructure tool for distributing Native BOT and ERC-20 tokens on BOT Chain in single batch transactions.',
   icons: {
-    icon: '/logo.svg',
+    icon: '/logo.png',
   },
 };
 
@@ -16,8 +15,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookies = headers().get('cookie');
-
   return (
     <html lang="en">
       <head>
@@ -29,7 +26,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <ContextProvider cookies={cookies}>
+        <ContextProvider>
           {children}
         </ContextProvider>
       </body>

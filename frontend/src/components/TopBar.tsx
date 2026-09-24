@@ -5,7 +5,7 @@ import { useAccount, useChainId, useSwitchChain, useDisconnect } from 'wagmi';
 import { useAppKit } from '@reown/appkit/react';
 import { botchain } from '@/config/chains';
 import { shortenAddress, getExplorerAddressUrl } from '@/utils/formatters';
-import { AlertCircle, ChevronDown, Copy, LogOut, Check, RefreshCw, ExternalLink } from 'lucide-react';
+import { AlertCircle, ChevronDown, Copy, LogOut, Check, RefreshCw, ExternalLink, Globe } from 'lucide-react';
 
 export default function TopBar() {
   const { address, isConnected } = useAccount();
@@ -40,8 +40,8 @@ export default function TopBar() {
 
   return (
     <header className="top-bar">
-      {/* Network Chip */}
-      <div>
+      {/* Network Chip & Explorer Button */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         {isConnected && !isCorrectChain ? (
           <button
             type="button"
@@ -69,6 +69,27 @@ export default function TopBar() {
             <span>{isCorrectChain ? 'BOT Chain Mainnet (677)' : 'Disconnected'}</span>
           </div>
         )}
+
+        <a
+          href="https://scan.botchain.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-outline"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '5px',
+            padding: '5px 10px',
+            fontSize: '12px',
+            textDecoration: 'none',
+            color: 'var(--text-secondary)',
+          }}
+          title="Open BotScan Explorer"
+        >
+          <Globe size={13} color="var(--accent-blue)" />
+          <span>Explorer</span>
+          <ExternalLink size={11} color="var(--text-muted)" />
+        </a>
       </div>
 
       {/* Account Info & Actions */}

@@ -112,16 +112,22 @@ BOT MULTISENDER/
    npm run dev
    ```
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-5. Connect your wallet (MetaMask, TrustWallet, Coinbase Wallet, etc.) and switch to **BOT Chain (Chain ID: 968)**.
+5. Connect your wallet (MetaMask, TrustWallet, Coinbase Wallet, etc.) and switch to **BOT Chain (Chain ID: 677)**.
 
 ---
 
-### 2. Building for Production
+### 2. Building for Production (Static Export to `dist/`)
 
 ```bash
 cd frontend
 npm run build
-npm run start
+```
+
+This generates an optimized static production export in `frontend/dist/` (including `index.html`, assets, and JavaScript bundles) ready for deployment to any static host (Vercel, Netlify, GitHub Pages, Cloudflare Pages, S3, or Nginx).
+
+To preview the production build locally:
+```bash
+npx serve dist
 ```
 
 ---

@@ -19,7 +19,6 @@ typechain-types/
 .next/
 out/
 build/
-dist/
 
 # OS & Editor Files
 .DS_Store

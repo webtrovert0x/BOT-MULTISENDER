@@ -5,7 +5,7 @@ import { useAccount, useBalance } from 'wagmi';
 import { useAppKit } from '@reown/appkit/react';
 import { shortenAddress, formatBalance } from '@/utils/formatters';
 import { botchain } from '@/config/chains';
-import { Send, LayoutDashboard, History, FileCode2, BookOpen, Wallet, LogOut, Copy, Check } from 'lucide-react';
+import { Send, LayoutDashboard, History, FileCode2, BookOpen, Wallet, LogOut, Copy, Check, Globe, ExternalLink } from 'lucide-react';
 
 interface SidebarProps {
   currentView: 'send' | 'dashboard' | 'history' | 'contracts' | 'docs';
@@ -35,7 +35,18 @@ export default function Sidebar({ currentView, onSelectView }: SidebarProps) {
       <div>
         {/* Brand Header */}
         <div className="brand-section">
-          <div className="brand-logo">B</div>
+          <img
+            src="/logo.png"
+            alt="BOT Multisender Logo"
+            style={{
+              width: '36px',
+              height: '36px',
+              borderRadius: '50%',
+              objectFit: 'cover',
+              boxShadow: '0 0 12px rgba(100, 108, 255, 0.4)',
+              border: '1px solid rgba(255, 255, 255, 0.15)'
+            }}
+          />
           <div className="brand-info">
             <span className="brand-title">BOT MULTISENDER</span>
             <span className="brand-subtitle">BOT Chain (677)</span>
@@ -90,6 +101,19 @@ export default function Sidebar({ currentView, onSelectView }: SidebarProps) {
             <BookOpen size={16} />
             <span>Docs</span>
           </button>
+
+          <a
+            href="https://scan.botchain.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-item"
+            style={{ textDecoration: 'none', color: 'var(--text-secondary)' }}
+            title="Open BotScan Explorer"
+          >
+            <Globe size={16} />
+            <span>Explorer</span>
+            <ExternalLink size={12} style={{ marginLeft: 'auto', opacity: 0.7 }} />
+          </a>
         </nav>
       </div>
 

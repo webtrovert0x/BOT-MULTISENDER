@@ -61,8 +61,23 @@ export default function DashboardView({ onStartSend, history }: DashboardViewPro
           <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--status-success)' }}>
             BOT Chain Mainnet
           </div>
-          <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '4px' }}>
-            Chain ID: 677 (BotScan)
+          <div style={{ marginTop: '4px' }}>
+            <a
+              href="https://scan.botchain.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: '12px',
+                color: 'var(--accent-blue)',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+              }}
+            >
+              <span>Chain ID: 677 (BotScan)</span>
+              <ExternalLink size={11} />
+            </a>
           </div>
         </div>
       </div>
