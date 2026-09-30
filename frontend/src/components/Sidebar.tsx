@@ -102,16 +102,32 @@ export default function Sidebar({ currentView, onSelectView }: SidebarProps) {
             <span>Docs</span>
           </button>
 
+          <div className="nav-divider" />
+
+          {/* Official BOT Chain Ecosystem Links */}
+          <a
+            href="https://botchain.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-item"
+            style={{ textDecoration: 'none', color: 'var(--text-secondary)' }}
+            title="BOT Chain Official Website (botchain.ai)"
+          >
+            <Globe size={16} color="#3B82F6" />
+            <span>botchain.ai</span>
+            <ExternalLink size={12} style={{ marginLeft: 'auto', opacity: 0.7 }} />
+          </a>
+
           <a
             href="https://scan.botchain.ai"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-item"
             style={{ textDecoration: 'none', color: 'var(--text-secondary)' }}
-            title="Open BotScan Explorer"
+            title="BOT Chain Explorer (scan.botchain.ai)"
           >
-            <Globe size={16} />
-            <span>Explorer</span>
+            <Globe size={16} color="#8B5CF6" />
+            <span>scan.botchain.ai</span>
             <ExternalLink size={12} style={{ marginLeft: 'auto', opacity: 0.7 }} />
           </a>
         </nav>

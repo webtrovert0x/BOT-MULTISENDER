@@ -59,9 +59,27 @@ export default function DashboardView({ onStartSend, history }: DashboardViewPro
             Active Network
           </div>
           <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--status-success)' }}>
-            BOT Chain Mainnet
+            BOT Chain Mainnet (677)
           </div>
-          <div style={{ marginTop: '4px' }}>
+          <div style={{ marginTop: '6px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <a
+              href="https://botchain.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: '12px',
+                color: 'var(--accent-blue)',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                fontWeight: 600,
+              }}
+            >
+              <span>botchain.ai</span>
+              <ExternalLink size={11} />
+            </a>
+            <span style={{ color: 'var(--border-main)' }}>|</span>
             <a
               href="https://scan.botchain.ai"
               target="_blank"
@@ -73,9 +91,10 @@ export default function DashboardView({ onStartSend, history }: DashboardViewPro
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '4px',
+                fontWeight: 600,
               }}
             >
-              <span>Chain ID: 677 (BotScan)</span>
+              <span>scan.botchain.ai</span>
               <ExternalLink size={11} />
             </a>
           </div>

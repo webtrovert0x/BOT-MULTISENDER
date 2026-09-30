@@ -71,6 +71,27 @@ export default function TopBar() {
         )}
 
         <a
+          href="https://botchain.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-outline"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '5px',
+            padding: '5px 10px',
+            fontSize: '12px',
+            textDecoration: 'none',
+            color: 'var(--text-secondary)',
+          }}
+          title="Visit botchain.ai"
+        >
+          <Globe size={13} color="#3B82F6" />
+          <span>botchain.ai</span>
+          <ExternalLink size={11} color="var(--text-muted)" />
+        </a>
+
+        <a
           href="https://scan.botchain.ai"
           target="_blank"
           rel="noopener noreferrer"
@@ -84,10 +105,10 @@ export default function TopBar() {
             textDecoration: 'none',
             color: 'var(--text-secondary)',
           }}
-          title="Open BotScan Explorer"
+          title="Open BotScan Explorer (scan.botchain.ai)"
         >
-          <Globe size={13} color="var(--accent-blue)" />
-          <span>Explorer</span>
+          <Globe size={13} color="#8B5CF6" />
+          <span>scan.botchain.ai</span>
           <ExternalLink size={11} color="var(--text-muted)" />
         </a>
       </div>

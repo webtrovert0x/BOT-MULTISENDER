@@ -63,9 +63,17 @@ export default function DocsView() {
                 <td>BOT (18 Decimals)</td>
               </tr>
               <tr>
+                <td style={{ fontWeight: 600 }}>Official Website</td>
+                <td>
+                  <a href="https://botchain.ai" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-blue)', fontWeight: 600 }}>
+                    https://botchain.ai
+                  </a>
+                </td>
+              </tr>
+              <tr>
                 <td style={{ fontWeight: 600 }}>Block Explorer</td>
                 <td>
-                  <a href="https://scan.botchain.ai" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-blue)' }}>
+                  <a href="https://scan.botchain.ai" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-blue)', fontWeight: 600 }}>
                     https://scan.botchain.ai
                   </a>
                 </td>

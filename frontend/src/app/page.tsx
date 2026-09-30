@@ -263,6 +263,43 @@ export default function Home() {
 
           {currentView === 'docs' && <DocsView />}
         </main>
+
+        {/* Global Ecosystem Links Footer */}
+        <footer style={{
+          padding: '16px 32px',
+          borderTop: '1px solid var(--border-main)',
+          backgroundColor: 'var(--bg-surface)',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '12px',
+          fontSize: '12px',
+          color: 'var(--text-secondary)'
+        }}>
+          <div>
+            <span>BOT Multisender Protocol • High-Performance Batch Distribution on <strong>BOT Chain</strong></span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+            <a
+              href="https://botchain.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+            >
+              <span>https://botchain.ai</span>
+            </a>
+            <span style={{ color: 'var(--border-main)' }}>•</span>
+            <a
+              href="https://scan.botchain.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+            >
+              <span>https://scan.botchain.ai</span>
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
   );
