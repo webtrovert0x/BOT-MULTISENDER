@@ -71,22 +71,26 @@ export default function TopBar() {
         )}
 
         <a
-          href="https://botchain.ai"
+          href="https://www.botchain.ai/en/"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-outline"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '5px',
+            gap: '6px',
             padding: '5px 10px',
             fontSize: '12px',
             textDecoration: 'none',
             color: 'var(--text-secondary)',
           }}
-          title="Visit botchain.ai"
+          title="Visit BOT Chain Website (https://www.botchain.ai/en/)"
         >
-          <Globe size={13} color="#3B82F6" />
+          <img
+            src="/botchain.jpeg"
+            alt="BOT Chain Logo"
+            style={{ width: '15px', height: '15px', borderRadius: '50%', objectFit: 'contain' }}
+          />
           <span>botchain.ai</span>
           <ExternalLink size={11} color="var(--text-muted)" />
         </a>

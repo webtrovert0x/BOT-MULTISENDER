@@ -63,7 +63,7 @@ export default function DashboardView({ onStartSend, history }: DashboardViewPro
           </div>
           <div style={{ marginTop: '6px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a
-              href="https://botchain.ai"
+              href="https://www.botchain.ai/en/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -72,10 +72,15 @@ export default function DashboardView({ onStartSend, history }: DashboardViewPro
                 textDecoration: 'none',
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '4px',
+                gap: '5px',
                 fontWeight: 600,
               }}
             >
+              <img
+                src="/botchain.jpeg"
+                alt="BOT Chain Logo"
+                style={{ width: '14px', height: '14px', borderRadius: '50%', objectFit: 'contain' }}
+              />
               <span>botchain.ai</span>
               <ExternalLink size={11} />
             </a>

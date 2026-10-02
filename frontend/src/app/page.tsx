@@ -282,12 +282,17 @@ export default function Home() {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
             <a
-              href="https://botchain.ai"
+              href="https://www.botchain.ai/en/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+              style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '6px' }}
             >
-              <span>https://botchain.ai</span>
+              <img
+                src="/botchain.jpeg"
+                alt="BOT Chain Logo"
+                style={{ width: '16px', height: '16px', borderRadius: '50%', objectFit: 'contain' }}
+              />
+              <span>https://www.botchain.ai/en/</span>
             </a>
             <span style={{ color: 'var(--border-main)' }}>•</span>
             <a

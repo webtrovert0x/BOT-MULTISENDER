@@ -65,8 +65,13 @@ export default function DocsView() {
               <tr>
                 <td style={{ fontWeight: 600 }}>Official Website</td>
                 <td>
-                  <a href="https://botchain.ai" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-blue)', fontWeight: 600 }}>
-                    https://botchain.ai
+                  <a href="https://www.botchain.ai/en/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-blue)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                    <img
+                      src="/botchain.jpeg"
+                      alt="BOT Chain Logo"
+                      style={{ width: '15px', height: '15px', borderRadius: '50%', objectFit: 'contain' }}
+                    />
+                    <span>https://www.botchain.ai/en/</span>
                   </a>
                 </td>
               </tr>

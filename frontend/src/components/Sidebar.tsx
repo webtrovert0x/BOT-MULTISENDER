@@ -106,14 +106,18 @@ export default function Sidebar({ currentView, onSelectView }: SidebarProps) {
 
           {/* Official BOT Chain Ecosystem Links */}
           <a
-            href="https://botchain.ai"
+            href="https://www.botchain.ai/en/"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-item"
             style={{ textDecoration: 'none', color: 'var(--text-secondary)' }}
-            title="BOT Chain Official Website (botchain.ai)"
+            title="BOT Chain Official Website (https://www.botchain.ai/en/)"
           >
-            <Globe size={16} color="#3B82F6" />
+            <img
+              src="/botchain.jpeg"
+              alt="BOT Chain Logo"
+              style={{ width: '16px', height: '16px', borderRadius: '50%', objectFit: 'contain' }}
+            />
             <span>botchain.ai</span>
             <ExternalLink size={12} style={{ marginLeft: 'auto', opacity: 0.7 }} />
           </a>
